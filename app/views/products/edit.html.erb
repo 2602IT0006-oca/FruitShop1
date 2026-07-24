@@ -1,8 +1,8 @@
-<!-- app/views/products/new.html.erb -->
+<!-- app/views/products/edit.html.erb -->
 
-<h1>新規商品登録</h1>
+<h1>商品編集</h1>
 
-<%= form_with model: @product do |f| %>
+<%= form_with(model: @product, local: true) do |f| %>
   <div>
     <%= f.label :name, "商品名" %>
     <%= f.text_field :name %>
@@ -19,8 +19,6 @@
   </div>
 
   <div>
-    <%= f.submit "登録" %>
+    <%= f.submit "更新" %>
   </div>
-
-  
 <% end %>
